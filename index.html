@@ -1,0 +1,243 @@
+<html lang="en">
+    <head>
+        <title>Demo</title>
+        <style>
+            input {
+                display: block;
+                width: 100%;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        </style>
+        <script src="/animated-images.ts"></script>
+    </head>
+    <body>
+        <h1>Hello, World!</h1>
+        <label>
+            Animation Progress:
+            <input
+                id="progress"
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                onchange="document.getElementById('demo').setAttribute('progress', event.target.value)"
+            />
+        </label>
+        <label>
+            Auto Rotate?
+            <input
+                id="autorotate"
+                type="checkbox"
+                onchange="
+                    if (event.target.checked) {
+                        rotate();
+                    } else {
+                        clearInterval(window.rotateInterval);
+                    }
+                "
+            />
+        </label>
+        <script>
+            function rotate() {
+                window.rotateInterval = setInterval(() => {
+                    const demo = document.getElementById("demo");
+                    let progress = demo.getAttribute("progress");
+                    progress = parseFloat(progress || "0");
+                    progress += 1;
+                    progress = progress % 100;
+                    console.log({ progress });
+                    demo.setAttribute("progress", progress);
+                }, 20);
+            }
+        </script>
+        <animated-images id="demo" progress="50">
+            <animated-images-fallback>
+                <img src="/images/0001.webp" />
+            </animated-images-fallback>
+            <animated-images-frame
+                src="/images/0001.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0002.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0003.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0004.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0005.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0006.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0007.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0008.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0009.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0010.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0011.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0012.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0013.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0014.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0015.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0016.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0017.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0018.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0019.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0020.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0021.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0022.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0023.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0024.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0025.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0026.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0027.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0028.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0029.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0030.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0031.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0032.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0033.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0034.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0035.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0036.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0037.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0038.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0039.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0040.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0041.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0042.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0043.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0044.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0045.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0046.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0047.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0048.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0049.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0050.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0051.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0052.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0053.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0054.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0055.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0056.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0057.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0058.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0059.webp"
+            ></animated-images-frame>
+            <animated-images-frame
+                src="/images/0060.webp"
+            ></animated-images-frame>
+        </animated-images>
+    </body>
+</html>
